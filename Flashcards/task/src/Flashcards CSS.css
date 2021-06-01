@@ -1,0 +1,66 @@
+body{
+    display: flex;
+    background-color: #f5f6fa;
+    background-image:url("http://surl.li/vmbb");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: Open Sans, sans-serif;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    color: #4654d6;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.cards-container{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.card{
+    height: 12rem;
+    width: 12rem;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+    box-shadow: 0px 2px 4px 0px rgba(34, 60, 80, 0.2);
+    border-radius: 0.5rem;
+}
+
+.front,
+.back{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    position: absolute;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+.front{
+    background-color: white;
+    z-index: 2;
+    backface-visibility: hidden;
+    color: #74779a;
+}
+
+.back{
+    background-color: #e9edf4;
+    z-index: 1;
+    transform: rotateY(180deg);
+    color: #8e92ba;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
